@@ -1,0 +1,61 @@
+{
+	"name": "n8n-nodes-pdfsbuild",
+	"version": "0.1.0",
+	"description": "n8n node for pdfs.build: render PDFs from your pdfs.build templates with JSON data",
+	"license": "MIT",
+	"homepage": "https://pdfs.build",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"pdfs.build",
+		"pdf",
+		"pdf-generation",
+		"templates",
+		"typst"
+	],
+	"author": {
+		"name": "pdfs.build",
+		"email": "hello@pdfs.build",
+		"url": "https://pdfs.build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/buildpdfs/n8n-nodes-pdfsbuild.git"
+	},
+	"bugs": {
+		"url": "https://github.com/buildpdfs/n8n-nodes-pdfsbuild/issues",
+		"email": "hello@pdfs.build"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/PdfsBuildApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/PdfsBuild/PdfsBuild.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
